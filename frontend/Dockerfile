@@ -1,16 +1,7 @@
-FROM node:12
-
-ADD package.json /package.json
-
-ENV NODE_PATH=/node_modules
-ENV PATH=$PATH:/node_modules/.bin
-RUN npm install
-
+FROM node:16-alpine
 WORKDIR /app
-ADD . /app
-
-EXPOSE 8080
-EXPOSE 35729
-
-ENTRYPOINT ["/bin/bash", "/app/run.sh"]
-CMD ["start"]
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 4000
+CMD ["node", "app.js"]

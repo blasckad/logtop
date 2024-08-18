@@ -1,0 +1,104 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+.wrapwrapcontent {
+    max-width: 800px;
+    overflow: hidden;
+    border: solid 1px black;
+}
+
+.wrapcontent {
+    transition: all 0.2s;
+    flex-direction: row;
+    display: inline-flex;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+}
+
+.header div {
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.waiting {
+    overflow: hidden;
+    min-width: 800px;
+}
+
+.work {
+    min-width: 800px;
+}
+
+.comleted {
+    min-width: 800px;
+}
+
+
+.module {
+    margin: 20px;
+    border-bottom: 1px solid black;
+}
+
+.orderheader {
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid silver;
+}
+
+.orderheader div {
+    margin-bottom: 5px;
+}
+
+.wraporderinfo {
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid silver;
+}
+
+.orderinfo {
+    width: 600px;
+    display: grid;
+    margin-top: 10px;
+    /* justify-content: space-between; */
+    grid-template-columns: 1fr 2fr 1fr 0.5fr;
+}
+
+.note {
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.count {
+    font-size: smaller;
+    color: rgb(104, 104, 104);
+}
+
+.countdata {
+    font-size: 15px;
+    color: black;
+}
+
+.button {
+    margin: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    width: fit-content;
+    border: none;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 1px white, 0 0 0 2px black;
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    margin-left: 0px;
+    height: 40px;
+    border-bottom: 1px solid silver;
+}
+
+.header {
+    padding: 10px 20px;
+    margin: 1px 11px 1px 11px;
+}
+
+.header-active {
+    margin-bottom: 0px;
+    border: solid 1px black;
+}
+
+.header:hover {
+    margin: 0px 10px 0px 10px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+
+.out {
+    padding: 10px 10px;
+    position: relative;
+    left: 300px;
+    bottom: 40px;
+    width: 50px;
+}
+
+.out:hover {
+    border-bottom: solid 1px black;
+    cursor: pointer;
+}

@@ -1,0 +1,167 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.wrapwrapcontent {
+    max-width: 800px;
+    overflow: hidden;
+    border: solid 1px black;
+}
+
+.wrapcontent {
+    transition: all 0.2s;
+    flex-direction: row;
+    display: inline-flex;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+}
+
+.header div {
+    padding: 15px;
+}
+
+.header div div {
+    margin: 1px;
+    padding: 15px;
+}
+
+.header div div:hover {
+    cursor: pointer;
+}
+
+.singup {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    min-width: 800px;
+}
+
+.login {
+    display: flex;
+    justify-content: space-around;
+    min-width: 800px;
+    
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #3C82F8;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+}
+
+.button {
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+    border: none;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
+    cursor: pointer;
+}
+
+.singupdata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.singupdata input, button {
+    margin: 10px;
+}
+
+.singupdata input {
+    text-align: left;
+}
+
+.singupcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.singupcode input, button {
+    margin: 10px;
+}
+
+.singupcode input {
+    text-align: left;
+}
+
+
+
+
+.logindata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logindata input, button {
+    margin: 10px;
+}
+
+.logindata input {
+    text-align: left;
+}
+
+.logincode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logincode input, button {
+    margin: 10px;
+}
+
+.logincode input {
+    text-align: left;
+}
+
+.insertcode {
+    width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+    color: green;
+    text-align: left;
+}
+
+.errorcode {
+    width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+}
+
+.notuser {
+    width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+}
+

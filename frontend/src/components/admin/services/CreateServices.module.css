@@ -1,0 +1,45 @@
+.wrap {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.module {
+    display: flex;
+    flex-direction: column;
+}
+
+.p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.wrapbtn {
+    margin-bottom: 10px;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.btn {
+    margin-left: 0px;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+    border: none;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
+    cursor: pointer;
+}

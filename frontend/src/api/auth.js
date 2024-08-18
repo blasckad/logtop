@@ -1,119 +1,41 @@
-export const singup = async (email, password, name, telegram, code) => {
+import { request } from "./request.js";
 
-  // const formData = new FormData();
+export const singup = async (email, name, telegram, code) => {
 
-  // formData.append('email', email);
-  // formData.append('password', password);
+  const formData = {"email": email, "name": name, "telegram": telegram, "code": code};
+  const path = '/api/singup';
 
-  const formData = {"email": email, "password": password, "name": name, "telegram": telegram, "code": code}
-  
+  return request(path, formData)
 
-  const request = new Request('/api/singup', {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  });
-
-  const response = await fetch(request);
-
-  if (response.status === 500) {
-    throw new Error('Internal server error');
-  }
-
-  const data = await response.json();
-
-  if (response.status > 400 && response.status < 500) {
-    if (data.detail) {
-      throw data.detail;
-    }
-    throw data;
-  }
-
-  return data;
 };
 
-export const confirm = async (email) => {
-  const formData = {"email": email}
+export const confirmSingUP = async (email) => {
+  const formData = {"email": email};
+  const path = '/api/confirmsingup';
+  return request(path, formData)
   
-
-  const request = new Request('/api/confirmsingup', {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  });
-
-  const response = await fetch(request);
-
-  if (response.status === 500) {
-    throw new Error('Internal server error');
-  }
-
-  const data = await response.json();
-
-  if (response.status > 400 && response.status < 500) {
-    if (data.detail) {
-      throw data.detail;
-    }
-    throw data;
-  }
-
-  return data;
 }
 
 
-export const login = async (email, password) => {
+export const login = async (email, code) => {
 
-  const formData = {"email": email, "password": password}
+  const formData = {"email": email, "code": code}
+  const path = '/api/login';
+  return request(path, formData)
   
+};
 
-  const request = new Request('/api/login', {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  });
+export const confirmLogin = async (email) => {
 
-  const response = await fetch(request);
-
-  if (response.status === 500) {
-    throw new Error('Internal server error');
-  }
-
-  const data = await response.json();
-
-  if (response.status > 400 && response.status < 500) {
-    if (data.detail) {
-      throw data.detail;
-    }
-    throw data;
-  }
-
-  return data;
+  const formData = {"email": email}
+  const path = '/api/confirmlogin';
+  return request(path, formData)
+  
 };
 
 export const token = async (token) => {
 
   const formData = {"token": token}
-
-  const request = new Request('/api/token', {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  });
-
-  const response = await fetch(request);
-
-  if (response.status === 500) {
-    throw new Error('Internal server error');
-  }
-
-  const data = await response.json();
-
-  if (response.status > 400 && response.status < 500) {
-    if (data.detail) {
-      throw data.detail;
-    }
-    throw data;
-  }
-
-  return data;
+  const path = '/api/token'
+  return request(path, formData)
 };

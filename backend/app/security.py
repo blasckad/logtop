@@ -27,6 +27,7 @@ def check_code(email: str, code: str) -> bool:
     # if verify_password(plain_password=code, hashed_password=hashed_code):
     #     return True
     if hashed_code == code:
+        # del cacheCodes[email]
         return True
     return False
 
@@ -40,7 +41,7 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
 
 def create_access_token(*, data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
-    expire = datetime.utcnow() + timedelta(minutes=300)
+    expire = datetime.utcnow() + timedelta(minutes=30000000)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
